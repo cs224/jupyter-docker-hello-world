@@ -32,8 +32,11 @@ fi
 #docker run -it --rm -p 8888:8888 -v ${dir}:/tmp/${bn} -w /tmp/${bn} continuumio/anaconda3:5.1.0 /bin/bash
 #docker run -it --rm -p 8888:8888 continuumio/anaconda3:5.1.0 /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser"
 
+#IMAGE=jupyter/datascience-notebook:c88678a1c7c9
+IMAGE=jupyter-binder-hello-world-image:latest
+
 # https://conda.io/docs/user-guide/install/download.html
 # MINICONDA_VERSION 4.3.30
-#docker run -it --rm -v ${dir}:/home/jovyan/work --user root -e NB_UID=$UID -e NB_GID=$(getent group docker | awk -F: '{printf "%d", $3}') jupyter/datascience-notebook:c88678a1c7c9 start.sh
-docker run -it --rm -v ${dir}:/home/jovyan/work -p 8888:8888 --user root -e NB_UID=$UID -e NB_GID=$(getent group docker | awk -F: '{printf "%d", $3}') -w /home/jovyan/work jupyter/datascience-notebook:c88678a1c7c9 start-notebook.sh --NotebookApp.token=''
+#docker run -it --rm -v ${dir}:/home/jovyan/work --user root -e NB_UID=$UID -e NB_GID=$(getent group docker | awk -F: '{printf "%d", $3}') $IMAGE start.sh
+docker run -it --rm -v ${dir}:/home/jovyan/work -p 8888:8888 --user root -e NB_UID=$UID -e NB_GID=$(getent group docker | awk -F: '{printf "%d", $3}') -w /home/jovyan/work $IMAGE start-notebook.sh --NotebookApp.token=''
 
