@@ -20,7 +20,9 @@ Run the docker image:
 
     ./jnw.sh # jupyter notebook wrapper
 
-And connect with your browser to: `http://localhost:8888`
+And connect with your browser to: [`http://localhost:8888`](http://localhost:8888)
+
+For using [PyCharm](https://www.jetbrains.com/help/pycharm/meet-pycharm.html) with your docker container see [Docker: Using Docker as a Remote Interpreter](https://www.jetbrains.com/help/pycharm/using-docker-as-a-remote-interpreter.html)
 
 Test it locally outside of docker via a python/conda environment:
 
