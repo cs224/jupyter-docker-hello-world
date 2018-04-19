@@ -9,8 +9,9 @@ dependencies:
   - scikit-learn=0.19.1
   - matplotlib=2.2.2
   - seaborn=0.8.1
-  # https://github.com/conda/conda/issues/2800
-  # https://stackoverflow.com/questions/47887224/anaconda-install-specific-packages-from-specific-channels-using-environment-yml
-  - conda-forge::watermark
+  - GPy=1.9.2
+  - xlrd=1.1.0
+  - pytest=3.5.0
+  - openpyxl=2.5.1
   - pip:
-    - pip==9.0.3
+    - pip==10.0.0

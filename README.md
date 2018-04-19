@@ -6,19 +6,15 @@ Activate [npstripout](https://github.com/kynan/nbstripout) in your local reposit
     nbstripout --install
     nbstripout --install --attributes .gitattributes
 
-Build the docker images. All commands need the environment variables set in `env.sh`. Execute the following in each shell you work in:
-
-    bash # so that you can leave the environment with Ctrl-D
-    source env.sh
-
-Build the docker images:
+Build the docker image:
 
     pushd build-docker-base-image && make && popd
-    pushd build-docker-image && make && popd
+
 
 Run the docker image:
 
     ./jnw.sh # jupyter notebook wrapper
+
 
 And connect with your browser to: [`http://localhost:8888`](http://localhost:8888)
 
@@ -26,11 +22,14 @@ For using [PyCharm](https://www.jetbrains.com/help/pycharm/meet-pycharm.html) wi
 
 Test it locally outside of docker via a python/conda environment:
 
-    conda env create # conda env create -n jupyter-docker-hello-world
-    # conda env update
+    conda env create -n jupyter-docker-hello-world -f build-docker-base-image/environment.yml
+    # conda env update -n jupyter-docker-hello-world -f build-docker-base-image/environment.yml
     # conda remove --name jupyter-docker-hello-world --all
     source activate jupyter-docker-hello-world
+    # install the other missing packages as described in the Dockerfile
+
     source deactivate
+
     conda info --envs # or: conda env list
     conda list -n jupyter-docker-hello-world
     conda env export > environment_.yml
