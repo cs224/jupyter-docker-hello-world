@@ -13,7 +13,7 @@ RUN conda env update -n root
 
 # https://uoftcoders.github.io/studyGroup/lessons/r-python-conda-setup/
 # https://github.com/conda-forge/r-essentials-feedstock
-RUN conda install -c r r-essentials
+RUN conda install -c r r-essentials=3.4.3
 
 COPY install-r-packages.py $HOME/
 RUN python3 $HOME/install-r-packages.py
