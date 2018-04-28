@@ -1,7 +1,8 @@
 #!/bin/bash
 
-dir=`readlink -f $0`
-dir=`dirname $dir`
+#dir=`readlink -f $0`
+#dir=`dirname $dir`
+dir=`pwd`
 
 IMAGE=jupyter-docker-base-image:201804191153
 
