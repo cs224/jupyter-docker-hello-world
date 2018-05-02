@@ -67,6 +67,6 @@ target/
 *.dat
 *.bak
 
-*.log
 *~
 .local
+/.Rhistory
