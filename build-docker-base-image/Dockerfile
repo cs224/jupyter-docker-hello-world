@@ -30,3 +30,5 @@ RUN pip --no-cache-dir install https://storage.googleapis.com/tensorflow/linux/c
 RUN pip --no-cache-dir install git+https://github.com/GPflow/GPflow.git@16570be787f2d3b0d8c4469a54ea2c6279186d8f
 
 RUN conda install -c conda-forge qgrid=1.0.2
+
+RUN conda install xarray dask netCDF4 bottleneck
