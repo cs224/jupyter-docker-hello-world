@@ -16,6 +16,10 @@ RUN conda env update -n root
 RUN conda install -c r r-essentials=3.4.3
 RUN conda install -c r rpy2=2.9.1
 
+COPY install.R $HOME/
+RUN echo "r <- getOption('repos'); r['CRAN'] <- 'https://cloud.r-project.org'; options(repos = r);" > ~/.Rprofile
+RUN Rscript install.R
+
 COPY install-r-packages.py $HOME/
 RUN python3 $HOME/install-r-packages.py
 
