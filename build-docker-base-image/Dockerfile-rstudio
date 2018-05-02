@@ -2,6 +2,10 @@ FROM jupyter-docker-base-image:201804191153
 
 LABEL maintainer="Christian Schuhegger <christian.schuhegger@gmx.de>"
 
+USER root
+
+RUN ln -s /bin/tar /bin/gtar
+
 USER $NB_UID
 
 RUN conda install -c r rstudio=1.1.423
