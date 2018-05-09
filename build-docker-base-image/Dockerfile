@@ -10,6 +10,7 @@ RUN conda install -c conda-forge watermark=1.6.0
 # RUN conda install -c pyviz pyviz=0.9.7
 RUN conda install -c pyviz holoviews=1.9.5
 RUN conda env update -n root
+# RUN conda install -c astropy astroml=0.3
 
 # https://uoftcoders.github.io/studyGroup/lessons/r-python-conda-setup/
 # https://github.com/conda-forge/r-essentials-feedstock
