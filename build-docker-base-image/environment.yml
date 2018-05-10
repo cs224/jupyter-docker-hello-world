@@ -12,8 +12,11 @@ dependencies:
   - xlrd=1.1.0
   - pytest=3.5.0
   - openpyxl=2.5.1
+  - xarray
+  - dask
+  - netCDF4
+  - bottleneck
   - pip:
-    - pip==10.0.0
     - gpy==1.9.2
     - lifelines==0.14.1
     - astroML==0.3
