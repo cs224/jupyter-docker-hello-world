@@ -19,4 +19,4 @@ dependencies:
   - pip:
     - gpy==1.9.2
     - lifelines==0.14.1
-    - astroML==0.3
+    #- astroML==0.3
