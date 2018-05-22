@@ -32,3 +32,4 @@ RUN python3 $HOME/install-r-packages.py
 # https://stackoverflow.com/questions/20101834/pip-install-from-git-repo-branch
 RUN pip --no-cache-dir install git+https://github.com/GPflow/GPflow.git@16570be787f2d3b0d8c4469a54ea2c6279186d8f
 RUN pip --no-cache-dir install git+https://github.com/astroML/astroML.git@master
+RUN pip --no-cache-dir install git+https://github.com/jszymon/pacal.git@master
