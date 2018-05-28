@@ -19,7 +19,10 @@ RUN conda install -c conda-forge pystan=2.17.1.0 pymc3=3.4.1 qgrid=1.0.2
 
 # https://uoftcoders.github.io/studyGroup/lessons/r-python-conda-setup/
 # https://github.com/conda-forge/r-essentials-feedstock
-RUN conda install -c r r-essentials=3.4.3 rpy2=2.9.1 r-rstan=2.17.2
+RUN conda install -c r r-essentials=3.4.3 rpy2=2.9.1 r-rstan=2.17.2 r-tidyverse=1.2.1 r-lubridate=1.7.1 r-networkd3=0.4
+# only conda-forge r-bnlearn=4.3
+
+# RUN conda install -c bioconda bioconductor-graph bioconductor-rbgl
 
 COPY install.R $HOME/
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'https://cloud.r-project.org'; options(repos = r);" > ~/.Rprofile
