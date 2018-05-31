@@ -36,3 +36,7 @@ RUN python3 $HOME/install-r-packages.py
 RUN pip --no-cache-dir install git+https://github.com/GPflow/GPflow.git@16570be787f2d3b0d8c4469a54ea2c6279186d8f
 RUN pip --no-cache-dir install git+https://github.com/astroML/astroML.git@master
 RUN pip --no-cache-dir install git+https://github.com/jszymon/pacal.git@master
+
+#conda install -c ankurankan pgmpy
+RUN pip --no-cache-dir install git+https://github.com/pgmpy/pgmpy@dev
+RUN pip --no-cache-dir install git+https://github.com/CyberPoint/libpgm@master
