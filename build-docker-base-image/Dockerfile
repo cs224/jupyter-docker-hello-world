@@ -38,5 +38,5 @@ RUN pip --no-cache-dir install git+https://github.com/astroML/astroML.git@master
 RUN pip --no-cache-dir install git+https://github.com/jszymon/pacal.git@master
 
 #conda install -c ankurankan pgmpy
-RUN pip --no-cache-dir install git+https://github.com/pgmpy/pgmpy@dev
+RUN pip --no-cache-dir install git+https://github.com/pgmpy/pgmpy@dev networkx==1.11
 RUN pip --no-cache-dir install git+https://github.com/CyberPoint/libpgm@master
