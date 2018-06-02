@@ -20,5 +20,6 @@ dependencies:
     - gpy==1.9.2
     - lifelines==0.14.1
     - minepy==1.2.2
+    - graphviz==0.8.3
     - pytest
     #- astroML==0.3

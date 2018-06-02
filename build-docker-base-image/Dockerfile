@@ -38,5 +38,13 @@ RUN pip --no-cache-dir install git+https://github.com/astroML/astroML.git@master
 RUN pip --no-cache-dir install git+https://github.com/jszymon/pacal.git@master
 
 #conda install -c ankurankan pgmpy
-RUN pip --no-cache-dir install git+https://github.com/pgmpy/pgmpy@dev networkx==1.11
+RUN pip --no-cache-dir install git+https://github.com/pgmpy/pgmpy@dev networkx==2.1 # networkx==1.11
 RUN pip --no-cache-dir install git+https://github.com/CyberPoint/libpgm@master
+
+# http://pygraphviz.github.io/documentation/pygraphviz-1.4rc1/install.html
+# https://stackoverflow.com/questions/36114817/pygraphviz-is-just-not-getting-installed-in-os-x-10-9-4
+# RUN conda install -c anaconda graphviz
+# RUN pip install --global-option=build_ext --global-option="-I/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/include/" --global-option="-L/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/lib" git+https://github.com/pygraphviz/pygraphviz.git#egg=pygraphviz
+# RUN pip install --include-path=/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/include --library-path=/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/lib git+https://github.com/pygraphviz/pygraphviz.git#egg=pygraphviz
+# RUN git clone https://github.com/pygraphviz/pygraphviz.git && pushd pygraphviz && python setup.py install --include-path=/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/include --library-path=/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/lib && popd
+# RUN conda install -c anaconda pygraphviz
