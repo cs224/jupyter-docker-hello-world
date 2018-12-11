@@ -29,7 +29,7 @@ RUN conda install -c conda-forge watermark=1.7.0
 # RUN pip --no-cache-dir install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.6.0-cp36-cp36m-linux_x86_64.whl
 # conda env update -n py36ds
 RUN conda env update -n base
-
+RUN pip install --upgrade xlsxwriter
 RUN conda install -c conda-forge pystan=2.17.1.0 pymc3=3.5 qgrid=1.1.1 libgit2=0.27.7 tzlocal=1.5.1
 RUN pip install git+https://github.com/arviz-devs/arviz.git@master
 
