@@ -20,11 +20,10 @@ dependencies:
   - mkl-service=1.1.2
   - zlib=1.2.11
   - nltk=3.3.0
+  - sympy=1.3
   - pip:
     - gpy==1.9.6
     - lifelines==0.15.1
     - minepy==1.2.2
     - graphviz==0.10.1
     - requests==2.20.1
-
-
