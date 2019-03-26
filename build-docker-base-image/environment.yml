@@ -26,6 +26,7 @@ dependencies:
   - numba #=0.42.0
   - jupyter #=1.0.0
   - cython #=0.29.5
+  - bioconda::pycluster
   - pip:
     - gpy #==1.9.6
     - lifelines #==0.15.1
