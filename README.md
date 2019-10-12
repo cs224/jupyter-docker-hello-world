@@ -54,3 +54,7 @@ Check on the command line if a module is installed:
     python -c "import watermark"
 
 See [notes-on-anaconda](http://vincebuffalo.org/notes/2017/08/28/notes-on-anaconda.html) for some pitfalls, especially around [not being able to specify channels on a per dependency level](https://github.com/conda/conda/issues/2800).
+
+# Templates
+
+* [0000-template-standard.ipynb](https://nbviewer.jupyter.org/github/cs224/jupyter-docker-hello-world/blob/master/0000-template-standard.ipynb?flush_cache=true)
