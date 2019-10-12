@@ -34,5 +34,6 @@ dependencies:
     - pyclustering
     - graphviz #==0.10.1
     - requests #==2.20.1
+    - xlsxwriter
     - tqdm
     - watermark
