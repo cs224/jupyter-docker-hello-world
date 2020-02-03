@@ -13,3 +13,4 @@
 * [scoop.sh : A command-line installer for Windows](https://scoop.sh/)
 * [git bash](https://gitforwindows.org/)
 * [Installing Anaconda on Windows](https://docs.anaconda.com/anaconda/install/windows/)
+* check python : `python -c 'print "Hello world!"; print ":-)"'`
