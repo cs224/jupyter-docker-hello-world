@@ -11,3 +11,5 @@
     * [Easily add Anaconda Prompt to Windows Terminal to make life better](https://dev.to/azure/easily-add-anaconda-prompt-in-windows-terminal-to-make-life-better-3p6j)
     * [Adding Git-Bash to the new Windows Terminal](https://stackoverflow.com/questions/56839307/adding-git-bash-to-the-new-windows-terminal)
 * [scoop.sh : A command-line installer for Windows](https://scoop.sh/)
+* [git bash](https://gitforwindows.org/)
+* [Installing Anaconda on Windows](https://docs.anaconda.com/anaconda/install/windows/)
