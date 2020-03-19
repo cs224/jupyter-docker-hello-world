@@ -40,7 +40,8 @@ RUN conda install -c pyviz holoviews=1.10.9
 
 # https://uoftcoders.github.io/studyGroup/lessons/r-python-conda-setup/
 # https://github.com/conda-forge/r-essentials-feedstock
-RUN conda install -c r r-essentials=3.5.1 rpy2=2.9.4 r-rstan=2.17.3 r-tidyverse=1.2.1 r-lubridate=1.7.4 r-networkd3=0.4
+#   conda install -c r r-essentials=3.6.0 rpy2=2.9.4 r-tidyverse=1.2.1 r-lubridate=1.7.4 r-networkd3=0.4
+RUN conda install -c r r-essentials=3.5.1 rpy2=2.9.4 r-tidyverse=1.2.1 r-lubridate=1.7.4 r-networkd3=0.4 r-rstan=2.17.3
 # only conda-forge r-bnlearn=4.3
 
 # RUN conda install -c bioconda bioconductor-graph bioconductor-rbgl

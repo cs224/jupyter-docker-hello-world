@@ -1,6 +1,7 @@
-name: jupyter-docker-base-image
+name: py36ds
 channels:
   - defaults
+  - astropy
 dependencies:
   - pip
   - numpy #=1.15.4
@@ -27,6 +28,10 @@ dependencies:
   - jupyter #=1.0.0
   - cython #=0.29.5
   - bioconda::pycluster
+  - astropy
+  - astroML
+  - libgit2
+  - zlib=1.2.11
   - pip:
     - gpy #==1.9.6
     - lifelines #==0.15.1
@@ -37,3 +42,5 @@ dependencies:
     - xlsxwriter
     - tqdm
     - watermark
+    - pymc3
+    - tzlocal
