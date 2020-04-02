@@ -1,15 +1,17 @@
-FROM jupyter/datascience-notebook:14fdfbf9cfc1
+FROM jupyter/datascience-notebook:dc9744740e12
+
 # https://jupyter-docker-stacks.readthedocs.io/en/latest/index.html
 # https://github.com/jupyter/docker-stacks
 # https://hub.docker.com/r/jupyter/datascience-notebook/tags/
-# docker run --rm -it jupyter/datascience-notebook:14fdfbf9cfc1 bash
+
+# docker run --rm -it jupyter/datascience-notebook:dc9744740e12 bash
 # docker run --rm -it jupyter-docker-base-image:latest bash
 # enable sudo within the stack:
 # https://github.com/jupyter/docker-stacks/issues/408
 # https://github.com/jupyter/docker-stacks/blob/master/datascience-notebook/README.md#docker-options
-# docker run -it --user root --privileged -v $(pwd):/home/jovyan/work -e GRANT_SUDO=yes --name=jdsn jupyter/datascience-notebook:14fdfbf9cfc1 start.sh bash
+# docker run -it --user root --privileged -v $(pwd):/home/jovyan/work -e GRANT_SUDO=yes --name=jdsn jupyter/datascience-notebook:dc9744740e12 start.sh bash
 # docker start -ia jdsn
-LABEL maintainer="Christian Schuhegger <christian.schuhegger@gmx.de>"
+LABEL maintainer="cs224 <cs224@weisser-zwerg.dev>"
 
 USER root
 RUN ln -s /bin/gzip /usr/bin/gzip
@@ -17,69 +19,16 @@ RUN ln -s /bin/tar /bin/gtar
 
 USER $NB_UID
 
-COPY environment.yml $HOME/
-
-
-RUN pip install --upgrade pip
-
-# conda create --name py36ds python=3.6
-RUN conda install python=3.6
-
-RUN conda install -c conda-forge watermark=1.7.0
-# RUN pip --no-cache-dir install https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.6.0-cp36-cp36m-linux_x86_64.whl
-# conda env update -n py36ds
-RUN conda env update -n base
-RUN pip install --upgrade xlsxwriter
-RUN conda install -c conda-forge pystan=2.17.1.0 pymc3=3.5 qgrid=1.1.1 libgit2=0.27.7 tzlocal=1.5.1
-RUN pip install git+https://github.com/arviz-devs/arviz.git@master
-
-# pip search tensorflow
-RUN pip --no-cache-dir install --upgrade https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.12.0-cp36-cp36m-linux_x86_64.whl
-# RUN conda install -c pyviz pyviz=0.9.7
-RUN conda install -c pyviz holoviews=1.10.9
-
-# https://uoftcoders.github.io/studyGroup/lessons/r-python-conda-setup/
-# https://github.com/conda-forge/r-essentials-feedstock
-#   conda install -c r r-essentials=3.6.0 rpy2=2.9.4 r-tidyverse=1.2.1 r-lubridate=1.7.4 r-networkd3=0.4
-RUN conda install -c r r-essentials=3.5.1 rpy2=2.9.4 r-tidyverse=1.2.1 r-lubridate=1.7.4 r-networkd3=0.4 r-rstan=2.17.3
-# only conda-forge r-bnlearn=4.3
-
-# RUN conda install -c bioconda bioconductor-graph bioconductor-rbgl
-
-#RUN apt install zlib1g-dev libgit2-dev
-# RUN conda install -c conda-forge libgit2
-# RUN conda install -c anaconda zlib=1.2.11
-
-COPY install.R $HOME/
 RUN echo "r <- getOption('repos'); r['CRAN'] <- 'https://cloud.r-project.org'; options(repos = r);" > ~/.Rprofile
-RUN Rscript install.R
 
-# RUN conda install -c conda-forge tzlocal
-COPY install-r-packages.py $HOME/
-RUN python3 $HOME/install-r-packages.py
+# RUN conda config --set allow_conda_downgrades true
+# RUN conda install -y conda=4.6.14 --no-pin
 
-# https://stackoverflow.com/questions/39365080/pip-install-editable-with-a-vcs-url
-# https://stackoverflow.com/questions/20101834/pip-install-from-git-repo-branch
-RUN pip --no-cache-dir install git+https://github.com/GPflow/GPflow.git@16570be787f2d3b0d8c4469a54ea2c6279186d8f
-RUN pip --no-cache-dir install git+https://github.com/astroML/astroML.git@master
-RUN pip --no-cache-dir install git+https://github.com/jszymon/pacal.git@master
+RUN conda init bash
 
-#conda install -c ankurankan pgmpy
-RUN pip --no-cache-dir install git+https://github.com/pgmpy/pgmpy@dev networkx==2.2 # networkx==1.11
-RUN pip --no-cache-dir install git+https://github.com/CyberPoint/libpgm@master
+COPY env-create.sh $HOME/
+COPY environment.yml $HOME/
+COPY install-1.R $HOME/
+COPY install-2.R $HOME/
 
-# http://pygraphviz.github.io/documentation/pygraphviz-1.4rc1/install.html
-# https://stackoverflow.com/questions/36114817/pygraphviz-is-just-not-getting-installed-in-os-x-10-9-4
-# RUN conda install -c anaconda graphviz
-# RUN pip install --global-option=build_ext --global-option="-I/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/include/" --global-option="-L/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/lib" git+https://github.com/pygraphviz/pygraphviz.git#egg=pygraphviz
-# RUN pip install --include-path=/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/include --library-path=/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/lib git+https://github.com/pygraphviz/pygraphviz.git#egg=pygraphviz
-# RUN git clone https://github.com/pygraphviz/pygraphviz.git && pushd pygraphviz && python setup.py install --include-path=/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/include --library-path=/home/user/cs/local/install/Anaconda3-5.1.0-Linux-x86_64/pkgs/graphviz-2.40.1-h25d223c_0/lib && popd
-# RUN conda install -c anaconda pygraphviz
-
-# https://spacy.io/usage/
-RUN conda install -c conda-forge spacy && python -m spacy download en && python -m spacy download de && python -m spacy download xx
-# RUN conda install -c anaconda nltk
-
-# https://stackoverflow.com/questions/49048734/runtimeerror-to-use-mkl-2018-with-theano-you-must-set-mkl-threading-layer-gnu
-RUN conda install mkl=2017.0.4
-# RUN echo 'export MKL_THREADING_LAYER=GNU' >> ~/.bashrc
+RUN env-create.sh

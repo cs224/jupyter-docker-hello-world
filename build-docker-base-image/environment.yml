@@ -2,7 +2,10 @@ name: py36ds
 channels:
   - defaults
   - astropy
+  - pyviz
+  - r
 dependencies:
+  - python=3.6
   - pip
   - numpy #=1.15.4
   - scipy #=1.1.0
@@ -30,8 +33,20 @@ dependencies:
   - bioconda::pycluster
   - astropy
   - astroML
-  - libgit2
   - zlib=1.2.11
+  - holoviews
+  - bokeh
+  - r-essentials=3.6.0
+  - rpy2=2.9.4
+  - r-tidyverse=1.2.1
+  - r-lubridate=1.7.4
+  - r-networkd3=0.4
+  - r-printr
+  - r-rmarkdown
+  - r-psych
+  - r-bnlearn
+  - r-gparotation
+  - r-corrplot
   - pip:
     - gpy #==1.9.6
     - lifelines #==0.15.1
@@ -44,3 +59,8 @@ dependencies:
     - watermark
     - pymc3
     - tzlocal
+    - pacal
+    - qgrid
+    - simplegeneric
+    - bs4
+    - dateparser
