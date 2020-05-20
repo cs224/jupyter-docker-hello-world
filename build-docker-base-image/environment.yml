@@ -64,3 +64,5 @@ dependencies:
     - simplegeneric
     - bs4
     - dateparser
+    - filterpy
+    - simdkalman

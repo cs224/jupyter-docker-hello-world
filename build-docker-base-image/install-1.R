@@ -24,3 +24,8 @@ if(length(new.packages)) install.packages(new.packages)
 list.of.packages <- c("psych", "GPArotation", "corrplot")
 new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
 if(length(new.packages)) install.packages(new.packages)
+
+# watch out for: https://stackoverflow.com/questions/53813323/installing-r-packages-in-macos-mojave-error-in-if-nzcharshlib-libadd
+list.of.packages <- c("Countr") # , "SparseM"
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
