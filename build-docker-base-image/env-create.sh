@@ -5,16 +5,22 @@ set -e
 
 # https://kapeli.com/cheat_sheets/Conda.docset/Contents/Resources/Documents/index
 
+# conda config --show | less
+# conda config --describe | less
+# conda config --write-default
+
 # https://github.com/conda/conda/issues/9367 Solving environment: failed with initial frozen solve. Retrying with flexible solve.
-echo ">> Initial config settings"
-conda install -y pycryptosat
-conda config --set sat_solver pycryptosat
-# conda config --set channel_priority false
-conda config --set channel_priority strict
+# conda config --set allow_conda_downgrades true
+# conda install conda=4.6.14
+# echo ">> Initial config settings"
+# conda install -y pycryptosat
+# conda config --set sat_solver pycryptosat
+# # conda config --set channel_priority false
+# conda config --set channel_priority strict
 
 echo ">> Updating base environemnt"
 # conda update -y -n base -c defaults conda --no-pin
-conda update -y conda --no-pin
+# conda update -y conda --no-pin
 pip install --upgrade pip
 
 echo ">> Setting-up py36ds environemnt"
