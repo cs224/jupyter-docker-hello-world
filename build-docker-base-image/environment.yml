@@ -71,3 +71,6 @@ dependencies:
     - simdkalman
     - yfinance
     - empyrical
+    - tensorflow
+    - tensorflow-probability
+    - arviz
