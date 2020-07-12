@@ -60,6 +60,8 @@ dependencies:
     - xlsxwriter
     - tqdm
     - watermark
+    - cvxpy
+    - pymc
     - pymc3
     - tzlocal
     - pacal

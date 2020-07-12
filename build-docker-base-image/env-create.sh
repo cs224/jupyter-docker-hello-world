@@ -21,7 +21,8 @@ set -e
 echo ">> Updating base environemnt"
 # conda update -y -n base -c defaults conda --no-pin
 # conda update -y conda --no-pin
-pip install --upgrade pip --user
+# https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html : Do not use pip with the --user argument, avoid all users installs.
+pip install --upgrade pip # --user
 
 echo ">> Setting-up py36ds environemnt"
 # conda create -n py36ds python=3.6
