@@ -1,6 +1,7 @@
 name: py36ds
 channels:
   - defaults
+  - numba
   - astropy
   - pyviz
   - r
@@ -29,6 +30,7 @@ dependencies:
   - nltk #=3.3.0
   - sympy #=1.3
   - numba #=0.42.0
+  - numba-scipy
   - jupyter #=1.0.0
   - cython #=0.29.5
   - bioconda::pycluster
