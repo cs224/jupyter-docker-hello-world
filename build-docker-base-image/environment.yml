@@ -80,3 +80,4 @@ dependencies:
     - tensorflow-probability
     - arviz
     - flatten_json
+    - phonenumbers
