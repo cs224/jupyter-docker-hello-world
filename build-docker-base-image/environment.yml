@@ -79,3 +79,4 @@ dependencies:
     - tensorflow
     - tensorflow-probability
     - arviz
+    - flatten_json
