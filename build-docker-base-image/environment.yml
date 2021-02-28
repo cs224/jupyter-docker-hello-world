@@ -84,4 +84,5 @@ dependencies:
     - fuzzy_pandas
     - tabula-py
     - camelot-py[cv]
+    - pikepdf
     - excalibur-py
