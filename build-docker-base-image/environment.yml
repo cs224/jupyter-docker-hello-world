@@ -82,3 +82,6 @@ dependencies:
     - flatten_json
     - phonenumbers
     - fuzzy_pandas
+    - tabula-py
+    - camelot-py[cv]
+    - excalibur-py
