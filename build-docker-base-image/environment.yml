@@ -86,3 +86,7 @@ dependencies:
     - camelot-py[cv]
     - pikepdf
     - excalibur-py
+    - psycopg2
+    - SQLAlchemy
+    - alembic
+    - dataclasses
