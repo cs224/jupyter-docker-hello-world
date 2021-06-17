@@ -90,3 +90,9 @@ dependencies:
     - SQLAlchemy
     - alembic
     - dataclasses
+    - tika
+    - urlextract # https://github.com/lipoja/URLExtract
+    - idna
+    - uritools
+    - appdirs
+    - dnspython
