@@ -96,3 +96,4 @@ dependencies:
     - uritools
     - appdirs
     - dnspython
+    - python-magic
