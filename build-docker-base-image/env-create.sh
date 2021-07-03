@@ -45,7 +45,7 @@ echo ">> Installing scs"
 mamba install -c conda-forge scs
 
 echo ">> Installing libgit2 and pystan from conda-forge"
-mamba install -n py38ds -c conda-forge libgit2 pystan
+mamba install -n py38ds -c conda-forge libgit2 pystan jupyter_nbextensions_configurator
 # conda install -y -n py38ds -c conda-forge libgit2 pystan r-biocmanager
 
 echo ">> Installing pip installable packages"
