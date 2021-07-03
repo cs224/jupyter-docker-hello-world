@@ -1,10 +1,11 @@
 name: py38ds
 channels:
-  - defaults
   - numba
   - astropy
   - pyviz
   - r
+  - pytorch
+  - defaults
 dependencies:
   - python=3.8
   - pip
@@ -52,6 +53,12 @@ dependencies:
   - r-bnlearn
   - r-gparotation
   - r-corrplot
+  - tensorflow-gpu=2.4.1
+  - pytorch=1.9.0
+  - torchvision
+  - torchaudio
+  - cudatoolkit=10.2
+  # - conda-forge::jupyter_nbextensions_configurator
   # - conda-forge::pymc3=3.11.2
   # - pip:
   #   - rpy2
