@@ -18,23 +18,46 @@ set -e
 # # conda config --set channel_priority false
 # conda config --set channel_priority strict
 
+# https://github.com/conda/conda/issues/9367#issuecomment-793968239
+# https://wolfv.medium.com/making-conda-fast-again-4da4debfb3b7
+# https://github.com/mamba-org/mamba
+# conda update --all
+# conda install mamba -n base -c conda-forge
+
 echo ">> Updating base environemnt"
 # conda update -y -n base -c defaults conda --no-pin
 # conda update -y conda --no-pin
 # https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html : Do not use pip with the --user argument, avoid all users installs.
 pip install --upgrade pip # --user
 
-echo ">> Setting-up py36ds environemnt"
-# conda create -n py36ds python=3.6
+echo ">> Setting-up py38ds environemnt"
+# conda create -n py38ds python=3.8
 conda env create -f environment.yml
 
-echo ">> Activating py36ds environment"
+echo ">> Activating py38ds environment"
 CONDA_BASE=$(conda info --base)
 source ${CONDA_BASE}/etc/profile.d/conda.sh
-conda activate py36ds
+conda activate py38ds
+
+echo ">> Installing scs"
+# conda install -c conda-forge scs
+mamba install -c conda-forge scs
+
+echo ">> Installing pip installable packages"
+pip install -r requirements.txt
+
+echo ">> Installing pymc3"
+# mamba repoquery depends aesara -c conda-forge -t
+# mamba install -y -n py38ds -c conda-forge aesara -vv
+# -v or -vv to add verbosity as long as your version of conda is up-to-date. Older versions, you'll have to use --debug
+# conda install -y -n py38ds -c conda-forge aesara
+# pip install git+https://github.com/pymc-devs/pymc3
+# conda install -y -n py38ds -c conda-forge pymc3=3.11.2
+# pip install pymc3
 
 echo ">> Installing libgit2 and pystan from conda-forge"
-conda install -y -n py36ds -c conda-forge libgit2 pystan r-biocmanager
+mamba install -y -n py38ds -c conda-forge libgit2 pystan r-biocmanager
+# conda install -y -n py38ds -c conda-forge libgit2 pystan r-biocmanager
 
 echo ">> Installing additional R packages"
 # echo "r <- getOption('repos'); r['CRAN'] <- 'https://cloud.r-project.org'; options(repos = r);" > ~/.Rprofile
@@ -46,7 +69,8 @@ Rscript install-2.R
 Rscript install-2.R
 
 echo ">> Installing pgmpy"
-conda install -y -n py36ds -c ankurankan pgmpy
+mamba install -y -n py38ds -c ankurankan pgmpy
+# conda install -y -n py38ds -c ankurankan pgmpy
 
 echo ">> Installing libpgm"
 pip --no-cache-dir install git+https://github.com/CyberPoint/libpgm@master

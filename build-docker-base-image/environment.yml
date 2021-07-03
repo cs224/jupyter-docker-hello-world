@@ -1,4 +1,4 @@
-name: py36ds
+name: py38ds
 channels:
   - defaults
   - numba
@@ -6,7 +6,7 @@ channels:
   - pyviz
   - r
 dependencies:
-  - python=3.6
+  - python=3.8
   - pip
   - numpy #=1.15.4
   - scipy #=1.1.0
@@ -15,6 +15,7 @@ dependencies:
   - h5py #=2.9.0
   - statsmodels
   - scikit-learn #=0.20.1
+  - scikit-learn-intelex # python -m sklearnex my_application.py # https://intel.github.io/scikit-learn-intelex/
   - matplotlib #=3.0.1
   - seaborn #=0.9.0
   - pytest #=4.0.1
@@ -36,7 +37,7 @@ dependencies:
   - bioconda::pycluster
   - astropy
   - astroML
-  - zlib=1.2.11
+  - zlib #=1.2.11
   - holoviews
   - bokeh
   - cvxopt
@@ -51,49 +52,50 @@ dependencies:
   - r-bnlearn
   - r-gparotation
   - r-corrplot
-  - pip:
-    - rpy2
-    - gpy #==1.9.6
-    - lifelines #==0.15.1
-    - minepy #==1.2.2
-    - pyclustering
-    - graphviz #==0.10.1
-    - requests #==2.20.1
-    - xlsxwriter
-    - tqdm
-    - watermark
-    - cvxpy
-    - pymc
-    - pymc3
-    - tzlocal
-    - pacal
-    - qgrid
-    - simplegeneric
-    - bs4
-    - dateparser
-    - filterpy
-    - simdkalman
-    - yfinance
-    - empyrical
-    - pyfolio
-    - tensorflow
-    - tensorflow-probability
-    - arviz
-    - flatten_json
-    - phonenumbers
-    - fuzzy_pandas
-    - tabula-py
-    - camelot-py[cv]
-    - pikepdf
-    - excalibur-py
-    - psycopg2
-    - SQLAlchemy
-    - alembic
-    - dataclasses
-    - tika
-    - urlextract # https://github.com/lipoja/URLExtract
-    - idna
-    - uritools
-    - appdirs
-    - dnspython
-    - python-magic
+  # - conda-forge::pymc3=3.11.2
+  # - pip:
+  #   - rpy2
+  #   - gpy #==1.9.6
+  #   # - gpflow
+  #   - lifelines #==0.15.1
+  #   - minepy #==1.2.2
+  #   - pyclustering
+  #   - graphviz #==0.10.1
+  #   - requests #==2.20.1
+  #   - xlsxwriter
+  #   - tqdm
+  #   - watermark
+  #   - cvxpy
+  #   # - pymc
+  #   - tzlocal
+  #   - pacal
+  #   - qgrid
+  #   - simplegeneric
+  #   - bs4
+  #   - dateparser
+  #   - filterpy
+  #   - simdkalman
+  #   - yfinance
+  #   - empyrical
+  #   - pyfolio
+  #   - tensorflow
+  #   - tensorflow-probability
+  #   - arviz
+  #   - flatten_json
+  #   - phonenumbers
+  #   - fuzzy_pandas
+  #   - tabula-py
+  #   - camelot-py[cv]
+  #   - pikepdf
+  #   - excalibur-py
+  #   - psycopg2
+  #   - SQLAlchemy
+  #   - alembic
+  #   # - dataclasses
+  #   - tika
+  #   - urlextract # https://github.com/lipoja/URLExtract
+  #   - idna
+  #   - uritools
+  #   - appdirs
+  #   - dnspython
+  #   - python-magic

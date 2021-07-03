@@ -1,0 +1,45 @@
+# pip install -r requirements.txt # --no-index --find-links file:///tmp/packages
+rpy2
+gpy #==1.9.6
+lifelines #==0.15.1
+minepy #==1.2.2
+pyclustering
+graphviz #==0.10.1
+requests #==2.20.1
+xlsxwriter
+tqdm
+watermark
+cvxpy
+# pymc
+tzlocal
+pacal
+qgrid
+simplegeneric
+bs4
+dateparser
+filterpy
+simdkalman
+yfinance
+empyrical
+pyfolio
+tensorflow
+tensorflow-probability
+arviz
+flatten_json
+phonenumbers
+fuzzy_pandas
+tabula-py
+camelot-py[cv]
+pikepdf
+excalibur-py
+psycopg2
+SQLAlchemy
+alembic
+tika
+urlextract # https://github.com/lipoja/URLExtract
+idna
+uritools
+appdirs
+dnspython
+python-magic
+pymc3
