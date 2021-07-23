@@ -50,3 +50,4 @@ appdirs
 dnspython
 python-magic
 pymc3
+daft
