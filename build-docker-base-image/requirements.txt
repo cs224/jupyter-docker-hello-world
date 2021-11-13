@@ -51,3 +51,5 @@ dnspython
 python-magic
 pymc3
 daft
+trading_calendars
+pandas_market_calendars
