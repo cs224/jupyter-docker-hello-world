@@ -12,7 +12,7 @@ tqdm==4.61.1
 rpy2
 gpy #==1.9.6
 lifelines #==0.15.1
-minepy #==1.2.2 # problematic on windows?
+# minepy #==1.2.2 # problematic on windows?
 pyclustering
 graphviz #==0.10.1
 requests #==2.20.1
@@ -39,7 +39,7 @@ tabula-py
 camelot-py[cv]
 pikepdf
 excalibur-py
-psycopg2
+# psycopg2
 SQLAlchemy
 alembic
 tika
