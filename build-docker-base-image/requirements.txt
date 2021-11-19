@@ -53,3 +53,4 @@ pymc3
 daft
 trading_calendars
 pandas_market_calendars
+numpy_financial
