@@ -42,6 +42,8 @@ dependencies:
   - holoviews
   - bokeh
   - cvxopt
+  - domosute::quantlib # conda install -c domosute quantlib
+  - domosute::quantlib-python # conda install -c domosute quantlib-python
   - r-essentials=3.6.0
   # - rpy2 #=2.9.4
   - r-tidyverse=1.2.1
@@ -53,56 +55,8 @@ dependencies:
   - r-bnlearn
   - r-gparotation
   - r-corrplot
-  - tensorflow-gpu=2.4.1
-  - pytorch=1.9.0
-  - torchvision
-  - torchaudio
-  - cudatoolkit=10.2
-  # - conda-forge::jupyter_nbextensions_configurator
-  # - conda-forge::pymc3=3.11.2
-  # - pip:
-  #   - rpy2
-  #   - gpy #==1.9.6
-  #   # - gpflow
-  #   - lifelines #==0.15.1
-  #   - minepy #==1.2.2
-  #   - pyclustering
-  #   - graphviz #==0.10.1
-  #   - requests #==2.20.1
-  #   - xlsxwriter
-  #   - tqdm
-  #   - watermark
-  #   - cvxpy
-  #   # - pymc
-  #   - tzlocal
-  #   - pacal
-  #   - qgrid
-  #   - simplegeneric
-  #   - bs4
-  #   - dateparser
-  #   - filterpy
-  #   - simdkalman
-  #   - yfinance
-  #   - empyrical
-  #   - pyfolio
-  #   - tensorflow
-  #   - tensorflow-probability
-  #   - arviz
-  #   - flatten_json
-  #   - phonenumbers
-  #   - fuzzy_pandas
-  #   - tabula-py
-  #   - camelot-py[cv]
-  #   - pikepdf
-  #   - excalibur-py
-  #   - psycopg2
-  #   - SQLAlchemy
-  #   - alembic
-  #   # - dataclasses
-  #   - tika
-  #   - urlextract # https://github.com/lipoja/URLExtract
-  #   - idna
-  #   - uritools
-  #   - appdirs
-  #   - dnspython
-  #   - python-magic
+  # - tensorflow-gpu=2.4.1
+  # - pytorch=1.9.0
+  # - torchvision
+  # - torchaudio
+  # - cudatoolkit=10.2
