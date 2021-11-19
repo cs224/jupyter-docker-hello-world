@@ -17,8 +17,8 @@ dependencies:
   - pytables #=3.4.4
   - h5py #=2.9.0
   - statsmodels
-  - scikit-learn #=0.20.1
-  - scikit-learn-intelex # python -m sklearnex my_application.py # https://intel.github.io/scikit-learn-intelex/
+  # - scikit-learn #=0.20.1
+  # - scikit-learn-intelex # python -m sklearnex my_application.py # https://intel.github.io/scikit-learn-intelex/
   - matplotlib #=3.0.1
   - seaborn #=0.9.0
   - pytest #=4.0.1
@@ -56,9 +56,9 @@ dependencies:
   - r-gparotation
   - r-corrplot
   # - tensorflow-gpu=2.4.1
-  - pytorch=1.9.0
-  - torchvision
-  - torchaudio
+  # - pytorch=1.9.0
+  # - torchvision
+  # - torchaudio
   # - cudatoolkit=10.2
   # - domosute::quantlib # conda install -c domosute quantlib
   # - domosute::quantlib-python # conda install -c domosute quantlib-python
