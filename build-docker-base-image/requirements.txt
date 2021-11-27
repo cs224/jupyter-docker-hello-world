@@ -54,3 +54,6 @@ daft
 trading_calendars
 pandas_market_calendars
 numpy_financial
+optuna
+sacred
+plotly
