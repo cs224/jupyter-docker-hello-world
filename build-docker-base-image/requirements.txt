@@ -57,3 +57,7 @@ numpy_financial
 optuna
 sacred
 plotly
+networkx[all]
+pyvis
+shareplum
+atlassian-python-api
