@@ -61,3 +61,4 @@ networkx[all]
 pyvis
 shareplum
 atlassian-python-api
+jellyfish
