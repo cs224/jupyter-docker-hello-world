@@ -62,3 +62,4 @@ pyvis
 shareplum
 atlassian-python-api
 jellyfish
+ytmusicapi
