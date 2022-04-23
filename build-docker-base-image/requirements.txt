@@ -21,7 +21,7 @@ tqdm
 watermark
 cvxpy
 # pymc
-tzlocal
+tzlocal==2.1
 pacal
 qgrid
 simplegeneric
