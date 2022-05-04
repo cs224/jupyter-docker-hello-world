@@ -63,3 +63,4 @@ shareplum
 atlassian-python-api
 jellyfish
 ytmusicapi
+jcs
