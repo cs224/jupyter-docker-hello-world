@@ -64,3 +64,5 @@ atlassian-python-api
 jellyfish
 ytmusicapi
 jcs
+geopy
+pyarrow
