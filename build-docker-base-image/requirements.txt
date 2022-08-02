@@ -67,3 +67,4 @@ ytmusicapi
 jcs
 geopy
 pyarrow
+paho-mqtt
