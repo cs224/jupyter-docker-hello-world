@@ -42,6 +42,7 @@ excalibur-py
 # psycopg2
 SQLAlchemy
 alembic
+psycopg2
 tika
 urlextract # https://github.com/lipoja/URLExtract
 idna

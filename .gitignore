@@ -71,3 +71,4 @@ target/
 .local
 /.Rhistory
 /path_to_file.xlsx
+.vscode
