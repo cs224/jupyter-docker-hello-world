@@ -42,8 +42,9 @@ dependencies:
   - holoviews
   - bokeh
   - cvxopt
-  - domosute::quantlib # conda install -c domosute quantlib
-  - domosute::quantlib-python # conda install -c domosute quantlib-python
+  - domosute::quantlib        # mamba install -c domosute quantlib
+  - domosute::quantlib-python # mamba install -c domosute quantlib-python
+  - fastchan::fastai          # mamba install -c fastchan fastai
   - r-essentials=3.6.0
   # - rpy2 #=2.9.4
   - r-tidyverse=1.2.1

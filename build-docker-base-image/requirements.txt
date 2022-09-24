@@ -68,3 +68,5 @@ jcs
 geopy
 pyarrow
 paho-mqtt
+dataclasses-json
+influxdb-client
