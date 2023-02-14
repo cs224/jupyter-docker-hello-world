@@ -48,6 +48,9 @@ echo ">> Installing libgit2 and pystan from conda-forge"
 mamba install -n py38ds -c conda-forge libgit2 pystan jupyter_nbextensions_configurator pyjanitor
 # conda install -y -n py38ds -c conda-forge libgit2 pystan r-biocmanager
 
+echo ">> Installing Google or-tools from conda-forge"
+mamba install -n py38ds -c conda-forge  ortools-cpp ortools-python
+
 echo ">> Installing pip installable packages"
 pip install -r requirements.txt
 
