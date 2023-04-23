@@ -70,3 +70,6 @@ pyarrow
 paho-mqtt
 dataclasses-json
 influxdb-client
+ordered-set
+plotly
+bokeh
