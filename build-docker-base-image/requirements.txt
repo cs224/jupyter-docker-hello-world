@@ -74,3 +74,6 @@ ordered-set
 plotly
 bokeh
 vobject
+openai
+redlines
+python-dotenv
