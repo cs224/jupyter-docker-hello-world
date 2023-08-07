@@ -30,32 +30,23 @@ CONDA_BASE=$(conda info --base)
 source ${CONDA_BASE}/etc/profile.d/conda.sh
 conda activate py311ds
 
-echo ">> Installing scs"
-# conda install -c conda-forge scs
+echo ">> Installing scs from conda-forge"
 mamba install -c conda-forge scs
 
-echo ">> Installing libgit2 and pystan from conda-forge"
-mamba install -n py38ds -c conda-forge libgit2 pystan jupyter_nbextensions_configurator pyjanitor
-# conda install -y -n py38ds -c conda-forge libgit2 pystan r-biocmanager
+echo ">> Installing libgit2 jupyter_nbextensions_configurator pyjanitor from conda-forge"
+mamba install -n py311ds -c conda-forge libgit2 jupyter_nbextensions_configurator pyjanitor
 
-echo ">> Installing Google or-tools from conda-forge"
-mamba install -n py38ds -c conda-forge  ortools-cpp ortools-python
+# echo ">> Installing Google or-tools from conda-forge"
+# mamba install -n py311ds -c conda-forge  ortools-cpp ortools-python # requires python 3.10
+
+echo ">> Installing PyMC from conda-forge"
+mamba install -n py311ds -c conda-forge "pymc>=5"
 
 echo ">> Installing pip installable packages"
 pip install -r requirements.txt
 
-# echo ">> Installing pymc3"
-# mamba repoquery depends aesara -c conda-forge -t
-# mamba install -y -n py38ds -c conda-forge aesara -vv
-# -v or -vv to add verbosity as long as your version of conda is up-to-date. Older versions, you'll have to use --debug
-# conda install -y -n py38ds -c conda-forge aesara
-# pip install git+https://github.com/pymc-devs/pymc3
-# conda install -y -n py38ds -c conda-forge pymc3=3.11.2
-# pip install pymc3
-
-
 echo ">> Installing additional R packages"
-mamba install -n py38ds -c conda-forge r-biocmanager
+mamba install -n py311ds -c conda-forge r-biocmanager
 # echo "r <- getOption('repos'); r['CRAN'] <- 'https://cloud.r-project.org'; options(repos = r);" > ~/.Rprofile
 Rscript install-1.R
 
@@ -64,19 +55,4 @@ echo ">> Installing additional R package LexisPlotR"
 Rscript install-2.R
 Rscript install-2.R
 
-echo ">> Installing pgmpy"
-# mamba install -y -n py38ds -c ankurankan pgmpy
-# conda install -y -n py38ds -c ankurankan pgmpy
-
-echo ">> Installing libpgm"
-# pip --no-cache-dir install git+https://github.com/CyberPoint/libpgm@master
-# pip uninstall numpy
-# pip install numpy==1.19.2
-# pip install daal==2021.1.2
-# pip install dpcpp_cpp_rt==2021.1.2
-
-#conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-# mamba install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c nvidia
-
 conda info --envs
-# conda list

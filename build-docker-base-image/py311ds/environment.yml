@@ -51,7 +51,7 @@ dependencies:
   - r-bnlearn
   - r-gparotation
   - r-corrplot
-  # - bioconda::pycluster
+  # - bioconda::pycluster       # needs python 3.9
   # - domosute::quantlib        # mamba install -c domosute quantlib
-  # - domosute::quantlib-python # mamba install -c domosute quantlib-python
+  # - domosute::quantlib-python # needs python 3.10 # mamba install -c domosute quantlib-python
   - fastchan::fastai          # mamba install -c fastchan fastai
