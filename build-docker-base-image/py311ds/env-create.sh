@@ -45,14 +45,18 @@ mamba install -n py311ds -c conda-forge "pymc>=5"
 echo ">> Installing pip installable packages"
 pip install -r requirements.txt
 
+# mamba install -c conda-forge r-systemfonts
+# apt install libharfbuzz-dev libfribidi-dev libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+#                                            libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+
 echo ">> Installing additional R packages"
 mamba install -n py311ds -c conda-forge r-biocmanager
 # echo "r <- getOption('repos'); r['CRAN'] <- 'https://cloud.r-project.org'; options(repos = r);" > ~/.Rprofile
-Rscript install-1.R
+# Rscript install-1.R
 
 echo ">> Installing additional R package LexisPlotR"
 # you have to run it twice to fix an install issue
-Rscript install-2.R
-Rscript install-2.R
+# Rscript install-2.R
+# Rscript install-2.R
 
 conda info --envs
