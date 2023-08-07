@@ -79,3 +79,4 @@ redlines
 python-dotenv
 markdown-it-py[linkify,plugins]
 mdformat
+ephem
