@@ -1,0 +1,57 @@
+name: py311ds
+channels:
+  - numba
+  - astropy
+  - pyviz
+  - r
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - pytables
+  - h5py
+  - statsmodels
+  - scikit-learn
+  - scikit-learn-intelex # python -m sklearnex my_application.py # https://intel.github.io/scikit-learn-intelex/
+  - matplotlib
+  - seaborn
+  - pytest
+  - xlrd
+  - openpyxl
+  - xlwt
+  - xarray
+  - dask
+  - netCDF4
+  - bottleneck
+  - mkl-service
+  - zlib
+  - nltk
+  - sympy
+  - numba
+  - numba-scipy
+  - jupyter
+  - cython
+  - astropy
+  - astroML
+  - zlib
+  - holoviews
+  - bokeh
+  - cvxopt
+  - r-essentials
+  - r-tidyverse
+  - r-lubridate
+  - r-networkd3
+  - r-printr
+  - r-rmarkdown
+  - r-psych
+  - r-bnlearn
+  - r-gparotation
+  - r-corrplot
+  # - bioconda::pycluster
+  # - domosute::quantlib        # mamba install -c domosute quantlib
+  # - domosute::quantlib-python # mamba install -c domosute quantlib-python
+  - fastchan::fastai          # mamba install -c fastchan fastai
