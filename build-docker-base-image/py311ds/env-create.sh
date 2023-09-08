@@ -25,10 +25,14 @@ echo ">> Setting-up py311ds environemnt"
 mamba env create -f environment.yml
 #conda env create -f environment.yml
 
+
 echo ">> Activating py311ds environment"
 CONDA_BASE=$(conda info --base)
 source ${CONDA_BASE}/etc/profile.d/conda.sh
 conda activate py311ds
+
+echo ">> Installing scikit-learn-intelex from main"
+mamba install scikit-learn-intelex -c main
 
 echo ">> Installing scs from conda-forge"
 mamba install -c conda-forge scs
