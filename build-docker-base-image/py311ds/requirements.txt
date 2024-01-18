@@ -75,3 +75,4 @@ markdown-it-py[linkify,plugins]
 mdformat
 ephem
 pvlib
+tabulate
